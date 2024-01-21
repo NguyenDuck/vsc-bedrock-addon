@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"downlevelIteration": true,
+		"outDir": "out",
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true
+	}
+}

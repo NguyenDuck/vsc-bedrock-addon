@@ -1,0 +1,13 @@
+{
+	"files.exclude": {
+		"out": false
+	},
+	"search.exclude": {
+		"out": true
+	},
+	"typescript.tsc.autoDetect": "off",
+
+	"typescript.format.semicolons": "remove",
+	"javascript.format.semicolons": "remove",
+	"cmake.configureOnOpen": false
+}
