@@ -1,0 +1,4 @@
+# Compiled extension
+out/
+# Node modules
+node_modules/
