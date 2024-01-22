@@ -1,10 +1,32 @@
 {
 	"name": "vsc-bedrock-addon",
+	"displayName": "VSC Bedrock Addon",
 	"version": "0.0.1",
 	"description": "A vscode extension using to make Minecraft Bedrock Edition AddOn",
-	"main": "main.ts",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"publisher": "NguyenDuck",
+	"categories": [
+		"Testing",
+		"Snippets",
+		"Programming Languages",
+		"Debuggers",
+		"Formatters",
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {},
 	"scripts": {
-		"test": "npm run watch"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p tsconfig.json",
+		"watch": "tsc -watch -p tsconfig.json",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
 	},
 	"repository": {
 		"type": "git",
@@ -22,5 +44,12 @@
 	"bugs": {
 		"url": "https://github.com/NguyenDuck/vsc-bedrock-addon/issues"
 	},
-	"homepage": "https://github.com/NguyenDuck/vsc-bedrock-addon#readme"
+	"homepage": "https://github.com/NguyenDuck/vsc-bedrock-addon#readme",
+	"dependencies": {
+		"@tsed/logger": "^6.6.3",
+		"@types/vscode": "^1.85.0",
+		"bedrock-schema": "file:../bedrock-schema",
+		"jsonc-parser-vsc": "^1.0.7",
+		"source-map-support": "^0.5.21"
+	}
 }
