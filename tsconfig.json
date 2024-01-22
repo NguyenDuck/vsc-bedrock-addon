@@ -1,7 +1,10 @@
 {
 	"compilerOptions": {
 		"module": "CommonJS",
+		"lib": ["ESNext", "DOM"],
+		"skipLibCheck": true,
 		"downlevelIteration": true,
+		"rootDir": "src",
 		"outDir": "out",
 		"strict": true,
 		"noFallthroughCasesInSwitch": true,
