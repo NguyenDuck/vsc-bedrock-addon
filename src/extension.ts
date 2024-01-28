@@ -1,9 +1,7 @@
 import { $log } from '@tsed/logger'
 import { ExtensionContext, RelativePattern, Uri, workspace } from 'vscode'
 import { parse } from 'jsonc-parser-vsc'
-import { basename, dirname, join } from 'path'
-
-import { IAddonManifest } from './manifest/IAddonManifest'
+import { basename, dirname } from 'path'
 
 $log.name = 'VSCBedrockAddon'
 
@@ -12,7 +10,7 @@ const globalStateKey = 'vsc-bedrock-addon'
 export async function activate(context: ExtensionContext) {
 	const globalState = context.globalState
 	if (globalState.get(globalStateKey) === undefined) {
-		globalState.update(globalStateKey, new Map())
+		globalState.update(globalStateKey, {})
 	}
 
 	// TODO: Get cached addon data from globalStorage and add it to dynamic schema
@@ -23,21 +21,23 @@ export async function activate(context: ExtensionContext) {
 	// Load and add to globalStorage
 	for await (const uri of manifestPaths) {
 		const completed = await loadAddonManifest(context, uri)
-		if (completed) {
-			const watcher = workspace.createFileSystemWatcher(
-				new RelativePattern(dirname(uri.path), basename(uri.path)),
-				true
-			)
-			watcher.onDidChange(async (e: Uri) => {
-				await loadAddonManifest(context, e)
-			})
-			watcher.onDidDelete(async (e: Uri) => {
-				await deleteAddonManifest(context, e)
-				watcher.dispose()
-			})
-			context.subscriptions.push(watcher)
-		}
+		if (completed) await addFileSystemWatcher(context, uri)
 	}
+}
+
+async function addFileSystemWatcher(context: ExtensionContext, uri: Uri) {
+	const watcher = workspace.createFileSystemWatcher(
+		new RelativePattern(dirname(uri.path), basename(uri.path)),
+		true
+	)
+	watcher.onDidChange(async (e: Uri) => {
+		await loadAddonManifest(context, e)
+	})
+	watcher.onDidDelete(async (e: Uri) => {
+		await deleteAddonManifest(context, e)
+		watcher.dispose()
+	})
+	context.subscriptions.push(watcher)
 }
 
 async function findManifestPaths(): Promise<Uri[]> {
@@ -59,7 +59,7 @@ async function loadAddonManifest(context: ExtensionContext, uri: Uri) {
 	if (!content) return false
 	if (content.toString().length < 150) return false
 
-	let manifest: IAddonManifest | undefined = content.toJSON()
+	const manifest = content.toJSON()
 	if (!manifest) return false
 	Object.assign(getGlobalState(context), {
 		[path]: manifest,
@@ -71,7 +71,6 @@ async function deleteAddonManifest(context: ExtensionContext, uri: Uri) {
 	const path = uri.path
 	// @ts-expect-error
 	delete getGlobalState(context)[path]
-	return true
 }
 
 function getGlobalState(context: ExtensionContext): Object {

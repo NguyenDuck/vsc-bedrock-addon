@@ -46,16 +46,15 @@
 	},
 	"homepage": "https://github.com/NguyenDuck/vsc-bedrock-addon#readme",
 	"dependencies": {
-		"@tsed/logger": "^6.6.3",
-		"@types/uuid": "^9.0.7",
-		"@types/vscode": "^1.85.0",
 		"bedrock-schema": "file:../bedrock-schema",
 		"jsonc-parser-vsc": "file:../jsonc-parser-vsc",
-		"source-map-support": "^0.5.21",
 		"uuid": "^9.0.1"
 	},
 	"devDependencies": {
+		"@tsed/logger": "^6.6.3",
 		"@types/node": "^20.11.6",
+		"@types/uuid": "^9.0.8",
+		"@types/vscode": "^1.85.0",
 		"@typescript-eslint/eslint-plugin": "^6.19.1",
 		"@typescript-eslint/parser": "^6.19.1"
 	}
