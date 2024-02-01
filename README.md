@@ -2,6 +2,8 @@
 
 Try to create an vscode extension using to make Minecraft Bedrock Edition AddOns
 
+[![CodeFactor](https://www.codefactor.io/repository/github/nguyenduck/vsc-bedrock-addon/badge)](https://www.codefactor.io/repository/github/nguyenduck/vsc-bedrock-addon)
+
 ## Features
 
 -   [ ] Provide diagnostic system for json, js, ts and more specific files of AddOn
