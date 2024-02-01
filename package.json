@@ -47,11 +47,13 @@
 	"homepage": "https://github.com/NguyenDuck/vsc-bedrock-addon#readme",
 	"dependencies": {
 		"bedrock-schema": "file:../bedrock-schema",
+		"event-emitter": "^0.3.5",
 		"jsonc-parser-vsc": "file:../jsonc-parser-vsc",
 		"uuid": "^9.0.1"
 	},
 	"devDependencies": {
 		"@tsed/logger": "^6.6.3",
+		"@types/event-emitter": "^0.3.5",
 		"@types/node": "^20.11.6",
 		"@types/uuid": "^9.0.8",
 		"@types/vscode": "^1.85.0",
