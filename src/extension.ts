@@ -56,11 +56,11 @@ async function readJsonFile(uri: Uri) {
 async function loadAddonManifest(context: ExtensionContext, uri: Uri) {
 	const path = uri.path
 	const content = await readJsonFile(uri)
-	if (!content) return false
-	if (content.toString().length < 150) return false
+	if (!content) {return false}
+	if (content.toString().length < 150) {return false}
 
 	let manifest: IAddonManifest | undefined = content.toJSON()
-	if (!manifest) return false
+	if (!manifest) {return false}
 	Object.assign(getGlobalState(context), {
 		[path]: manifest,
 	})
