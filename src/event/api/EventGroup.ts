@@ -7,19 +7,23 @@ import { Event } from '../Event'
  * Provides methods to add and remove events from the group.
  */
 export abstract class EventGroup {
-	private _events: Event<any>[] = []
+	private events: Event<any>[] = []
 
 	constructor(protected context: ExtensionContext) {}
 
-	get eventGroup(): Disposable[] {
-		return this._events.flatMap(e => e.disposables())
+	eventGroup(): Disposable[] {
+		return this.events.flatMap(e => e.disposables())
 	}
 
 	addEvent(event: Event<any>): void {
-		this._events.push(event)
+		this.events.push(event)
+	}
+
+	addEventGroup(eg: EventGroup): void {
+		this.events.push(...eg.events)
 	}
 
 	removeEvent(event: Event<any>): void {
-		this._events = this._events.filter(e => e !== event)
+		this.events = this.events.filter(e => e !== event)
 	}
 }

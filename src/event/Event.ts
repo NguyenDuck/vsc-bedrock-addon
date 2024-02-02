@@ -6,23 +6,23 @@ import { Disposable, ExtensionContext } from 'vscode'
  * Subclasses should implement get disposables to return disposables to clean up any resources.
  */
 export abstract class Event<T> {
-	protected listeners = new Set<(args: T) => void>()
+	protected listeners = new Set<(args: T) => Promise<void> | void>()
 
 	constructor(protected context: ExtensionContext) {}
 
-	public on(listener: (args: T) => void): this {
+	public on(listener: (args: T) => Promise<void> | void): this {
 		this.listeners.add(listener)
 		return this
 	}
 
-	public off(listener: (args: T) => void): this {
+	public off(listener: (args: T) => Promise<void> | void): this {
 		this.listeners.delete(listener)
 		return this
 	}
 
 	public async emit(args: T) {
 		for await (const listener of this.listeners) {
-			listener.call(this, args)
+			await listener.call(this, args)
 		}
 	}
 

@@ -8,25 +8,25 @@ $log.name = 'EventManager'
 /**
  * Manages registering and unregistering event handlers.
  *
- * On construction, registers disposables with the extension context.
+ * On construction, registers events with the extension context.
  * Provides methods to register and unregister events.
  */
 export class EventManager {
-	private disposables: Disposable[] = []
+	private events: Event<any>[] = []
 
 	constructor(private context: ExtensionContext) {}
 
 	registerEvent(event: Event<any>): void {
-		this.disposables.push(event)
+		this.events.push(event)
 		this.context.subscriptions.push(event)
 	}
 
-	registerEventGroup(event_group: EventGroup): void {
-		this.context.subscriptions.push(...event_group.eventGroup)
+	registerEventGroup(eg: EventGroup): void {
+		this.context.subscriptions.push(...eg.eventGroup())
 	}
 
 	removeEvent(event: Event<any>): void {
-		this.disposables = this.disposables.filter(d => {
+		this.events = this.events.filter(d => {
 			if (d === event) {
 				event.dispose()
 				return false
