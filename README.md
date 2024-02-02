@@ -14,6 +14,8 @@ Try to create an vscode extension using to make Minecraft Bedrock Edition AddOns
 
 > You are an AddOn Creator!
 
----
-
 **Enjoy!**
+
+## Project Structure
+
+![Project Structure](./assets/structure.svg)

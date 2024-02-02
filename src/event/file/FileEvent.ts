@@ -7,8 +7,8 @@ import { Event } from '../Event'
  * Contains common properties for events related to file system changes.
  * Subclasses should provide additional properties specific to the file event type.
  */
-export abstract class FileEvent extends Event {
-	constructor(protected context: ExtensionContext, protected uri: Uri) {
-		super()
+export abstract class FileEvent<T> extends Event<T> {
+	constructor(context: ExtensionContext, protected uri: Uri) {
+		super(context)
 	}
 }

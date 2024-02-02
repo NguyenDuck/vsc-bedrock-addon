@@ -1,0 +1,12 @@
+{
+	"outFile": "assets/structure.svg",
+	"nomnoml": [
+		"#title: VSCBedrockAddon Project Structure",
+		"#font: Ebrima",
+		"#direction: right",
+		"#fill: #b5e5ff",
+		"#lineWidth: 1",
+		"#leading: 2.25",
+		"\n"
+	]
+}
