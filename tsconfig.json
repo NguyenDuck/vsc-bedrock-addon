@@ -7,6 +7,7 @@
 		"rootDir": "src",
 		"outDir": "out",
 		"strict": true,
+		"sourceMap": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitAny": true
 	}

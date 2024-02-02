@@ -1,19 +1,19 @@
-import { ExtensionContext, Uri, workspace } from 'vscode'
+import { workspace, Disposable, Uri, TextDocumentChangeEvent } from 'vscode'
 import { FileEvent } from './FileEvent'
 
 /**
- * FileContentChangedEvent extends FileEvent to listen for text document
- * changes and emit events when the content changes for the file URI.
+ * Returns an array of Disposable objects that will dispose event handlers when this object is disposed.
+ * Specifically, it listens for text document change events and checks if the changed document matches this FileContentChangedEvent's uri.
+ * If so, it emits the uri and change event.
  */
-export class FileContentChangedEvent extends FileEvent {
-	constructor(context: ExtensionContext, uri: Uri) {
-		super(context, uri)
-		this.context.subscriptions.push(
+export class FileContentChangedEvent extends FileEvent<TextDocumentChangeEvent> {
+	disposables(): Disposable[] {
+		return [
 			workspace.onDidChangeTextDocument(async e => {
-				if (e.document.uri.fsPath === uri.fsPath) {
-					await this.emit([uri])
+				if (e.document.uri.fsPath === this.uri.fsPath) {
+					return await this.emit(e)
 				}
-			})
-		)
+			}),
+		]
 	}
 }

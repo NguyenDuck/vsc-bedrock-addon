@@ -1,6 +1,7 @@
 import { $log } from '@tsed/logger'
 import { Disposable, ExtensionContext } from 'vscode'
 import { Event } from './Event'
+import { EventGroup } from './api/EventGroup'
 
 $log.name = 'EventManager'
 
@@ -15,12 +16,16 @@ export class EventManager {
 
 	constructor(private context: ExtensionContext) {}
 
-	registerEvent(event: Event) {
+	registerEvent(event: Event<any>): void {
 		this.disposables.push(event)
 		this.context.subscriptions.push(event)
 	}
 
-	removeEvent(event: Event) {
+	registerEventGroup(event_group: EventGroup): void {
+		this.context.subscriptions.push(...event_group.eventGroup)
+	}
+
+	removeEvent(event: Event<any>): void {
 		this.disposables = this.disposables.filter(d => {
 			if (d === event) {
 				event.dispose()

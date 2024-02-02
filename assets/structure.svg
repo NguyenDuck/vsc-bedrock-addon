@@ -1,0 +1,243 @@
+<svg version="1.1" baseProfile="full" width="1009.0" height="444.0" viewbox="0 0 1009 444" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<desc >#.interface: fill=lightblue
+#.enumeration: fill=lightgreen
+#.type: fill=lightgray
+[Event&lt;T&gt;|+listeners: Set&lt;(args: T) =&gt; void&gt;;+context: ExtensionContext|\#on(): this;\#off(): this;\#emit(): Promise&lt;void&gt;;+dispose(): void;+static disposables(): Disposable\[\]]
+[EventManager|+disposables: Disposable\[\];+context: ExtensionContext|+registerEvent(): void;+registerEventGroup(): void;+removeEvent(): void]
+[EventGroup|+_events: Event&lt;any&gt;\[\];+context: ExtensionContext|+addEvent(): void;+removeEvent(): void]
+[ManifestEventGroup||]
+[EventGroup]&lt;:-[ManifestEventGroup]
+[FileContentChangedEvent||+disposables(): Disposable\[\]]
+[FileEvent&lt;T&gt;]&lt;:-[FileContentChangedEvent]
+[FileCreatedEvent||+disposables(): Disposable\[\]]
+[FileEvent&lt;T&gt;]&lt;:-[FileCreatedEvent]
+[FileDeletedEvent||+disposables(): Disposable\[\]]
+[FileEvent&lt;T&gt;]&lt;:-[FileDeletedEvent]
+[FileEvent&lt;T&gt;|+uri: Uri|]
+[Event&lt;T&gt;]&lt;:-[FileEvent&lt;T&gt;]</desc>
+<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+<g stroke="transparent" fill="transparent">
+<rect x="0.0" y="0.0" height="444.0" width="1009.0" stroke="none"></rect>
+</g>
+<g transform="translate(8, 8)" fill="#33322E">
+<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+<path d="M116.5 158.8 L116.5 188 L116.5 219.5 L116.5 219.5 " fill="none"></path>
+<path d="M121.8 158.8 L116.5 158.8 L111.2 158.8 L116.5 145.5 Z"></path>
+<path d="M619.3 252.5 L270.5 298 L270.5 318 L270.5 318.0 " fill="none"></path>
+<path d="M620.0 257.8 L619.3 252.5 L618.6 247.2 L632.5 250.8 Z"></path>
+<path d="M620.1 271.2 L551.5 298 L551.5 318 L551.5 318.0 " fill="none"></path>
+<path d="M622.0 276.1 L620.1 271.2 L618.1 266.2 L632.5 266.3 Z"></path>
+<path d="M763.9 271.2 L832.5 298 L832.5 318 L832.5 318.0 " fill="none"></path>
+<path d="M765.9 266.2 L763.9 271.2 L762.0 276.1 L751.5 266.3 Z"></path>
+<path d="M692.0 181.3 L692 188 L692 208 L692.0 208.0 " fill="none"></path>
+<path d="M697.3 181.3 L692.0 181.3 L686.7 181.3 L692.0 168.0 Z"></path>
+<g data-name="Event&lt;T&gt;">
+<g fill="#eee8d5" stroke="#33322E" data-name="Event&lt;T&gt;">
+<rect x="548.0" y="0.0" height="168.0" width="288.0" data-name="Event&lt;T&gt;"></rect>
+<path d="M548.0 31.0 L836.0 31.0" fill="none" data-name="Event&lt;T&gt;"></path>
+<path d="M548.0 77.0 L836.0 77.0" fill="none" data-name="Event&lt;T&gt;"></path>
+</g>
+<g transform="translate(548, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Event&lt;T&gt;">
+<a id="..\src\event\Event.ts.Event&lt;T&gt;" xlink:href="..\src\event\Event.ts"><text x="136.0" y="13.5" stroke="none" text-anchor="middle" data-name="Event&lt;T&gt;">Event&lt;T&gt;</text></a>
+
+</g>
+</g>
+<g transform="translate(548, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Event&lt;T&gt;">
+<text x="0.0" y="13.5" stroke="none" data-name="Event&lt;T&gt;">+listeners: Set&lt;(args: T) =&gt; void&gt;</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Event&lt;T&gt;">+context: ExtensionContext</text>
+
+</g>
+</g>
+<g transform="translate(548, 77)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Event&lt;T&gt;">
+<text x="0.0" y="13.5" stroke="none" data-name="Event&lt;T&gt;">#on(): this</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Event&lt;T&gt;">#off(): this</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Event&lt;T&gt;">#emit(): Promise&lt;void&gt;</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Event&lt;T&gt;">+dispose(): void</text>
+<text x="0.0" y="73.5" stroke="none" data-name="Event&lt;T&gt;">+static disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="EventManager">
+<g fill="#eee8d5" stroke="#33322E" data-name="EventManager">
+<rect x="273.0" y="15.0" height="138.0" width="235.0" data-name="EventManager"></rect>
+<path d="M273.0 46.0 L508.0 46.0" fill="none" data-name="EventManager"></path>
+<path d="M273.0 92.0 L508.0 92.0" fill="none" data-name="EventManager"></path>
+</g>
+<g transform="translate(273, 15)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EventManager">
+<a id="..\src\event\EventManager.ts.EventManager" xlink:href="..\src\event\EventManager.ts"><text x="109.5" y="13.5" stroke="none" text-anchor="middle" data-name="EventManager">EventManager</text></a>
+
+</g>
+</g>
+<g transform="translate(273, 46)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventManager">
+<text x="0.0" y="13.5" stroke="none" data-name="EventManager">+disposables: Disposable[]</text>
+<text x="0.0" y="28.5" stroke="none" data-name="EventManager">+context: ExtensionContext</text>
+
+</g>
+</g>
+<g transform="translate(273, 92)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventManager">
+<text x="0.0" y="13.5" stroke="none" data-name="EventManager">+registerEvent(): void</text>
+<text x="0.0" y="28.5" stroke="none" data-name="EventManager">+registerEventGroup(): void</text>
+<text x="0.0" y="43.5" stroke="none" data-name="EventManager">+removeEvent(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="EventGroup">
+<g fill="#eee8d5" stroke="#33322E" data-name="EventGroup">
+<rect x="0.0" y="22.5" height="123.0" width="233.0" data-name="EventGroup"></rect>
+<path d="M0.0 53.5 L233.0 53.5" fill="none" data-name="EventGroup"></path>
+<path d="M0.0 99.5 L233.0 99.5" fill="none" data-name="EventGroup"></path>
+</g>
+<g transform="translate(0, 22.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventGroup">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EventGroup">
+<a id="..\src\event\api\EventGroup.ts.EventGroup" xlink:href="..\src\event\api\EventGroup.ts"><text x="108.5" y="13.5" stroke="none" text-anchor="middle" data-name="EventGroup">EventGroup</text></a>
+
+</g>
+</g>
+<g transform="translate(0, 53.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventGroup">
+<text x="0.0" y="13.5" stroke="none" data-name="EventGroup">+_events: Event&lt;any&gt;[]</text>
+<text x="0.0" y="28.5" stroke="none" data-name="EventGroup">+context: ExtensionContext</text>
+
+</g>
+</g>
+<g transform="translate(0, 99.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventGroup">
+<text x="0.0" y="13.5" stroke="none" data-name="EventGroup">+addEvent(): void</text>
+<text x="0.0" y="28.5" stroke="none" data-name="EventGroup">+removeEvent(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="ManifestEventGroup">
+<g fill="#eee8d5" stroke="#33322E" data-name="ManifestEventGroup">
+<rect x="28.0" y="219.5" height="47.0" width="177.0" data-name="ManifestEventGroup"></rect>
+<path d="M28.0 250.5 L205.0 250.5" fill="none" data-name="ManifestEventGroup"></path>
+<path d="M28.0 258.5 L205.0 258.5" fill="none" data-name="ManifestEventGroup"></path>
+</g>
+<g transform="translate(28, 219.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ManifestEventGroup">
+<a id="..\src\event\api\ManifestEventGroup.ts.ManifestEventGroup" xlink:href="..\src\event\api\ManifestEventGroup.ts"><text x="80.5" y="13.5" stroke="none" text-anchor="middle" data-name="ManifestEventGroup">ManifestEventGroup</text></a>
+
+</g>
+</g>
+<g transform="translate(28, 250.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ManifestEventGroup">
+
+</g>
+</g>
+<g transform="translate(28, 258.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ManifestEventGroup">
+
+</g>
+</g>
+</g>
+<g data-name="FileContentChangedEvent">
+<g fill="#eee8d5" stroke="#33322E" data-name="FileContentChangedEvent">
+<rect x="150.0" y="318.0" height="70.0" width="241.0" data-name="FileContentChangedEvent"></rect>
+<path d="M150.0 349.0 L391.0 349.0" fill="none" data-name="FileContentChangedEvent"></path>
+<path d="M150.0 357.0 L391.0 357.0" fill="none" data-name="FileContentChangedEvent"></path>
+</g>
+<g transform="translate(150, 318)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileContentChangedEvent">
+<a id="..\src\event\file\FileContentChangedEvent.ts.FileContentChangedEvent" xlink:href="..\src\event\file\FileContentChangedEvent.ts"><text x="112.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileContentChangedEvent">FileContentChangedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(150, 349)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileContentChangedEvent">
+
+</g>
+</g>
+<g transform="translate(150, 357)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileContentChangedEvent">
+<text x="0.0" y="13.5" stroke="none" data-name="FileContentChangedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileEvent&lt;T&gt;">
+<g fill="#eee8d5" stroke="#33322E" data-name="FileEvent&lt;T&gt;">
+<rect x="632.5" y="208.0" height="70.0" width="119.0" data-name="FileEvent&lt;T&gt;"></rect>
+<path d="M632.5 239.0 L751.5 239.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
+<path d="M632.5 270.0 L751.5 270.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
+</g>
+<g transform="translate(632.5, 208)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileEvent&lt;T&gt;">
+<a id="..\src\event\file\FileEvent.ts.FileEvent&lt;T&gt;" xlink:href="..\src\event\file\FileEvent.ts"><text x="51.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileEvent&lt;T&gt;">FileEvent&lt;T&gt;</text></a>
+
+</g>
+</g>
+<g transform="translate(632.5, 239)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileEvent&lt;T&gt;">
+<text x="0.0" y="13.5" stroke="none" data-name="FileEvent&lt;T&gt;">+uri: Uri</text>
+
+</g>
+</g>
+<g transform="translate(632.5, 270)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileEvent&lt;T&gt;">
+
+</g>
+</g>
+</g>
+<g data-name="FileCreatedEvent">
+<g fill="#eee8d5" stroke="#33322E" data-name="FileCreatedEvent">
+<rect x="431.0" y="318.0" height="70.0" width="241.0" data-name="FileCreatedEvent"></rect>
+<path d="M431.0 349.0 L672.0 349.0" fill="none" data-name="FileCreatedEvent"></path>
+<path d="M431.0 357.0 L672.0 357.0" fill="none" data-name="FileCreatedEvent"></path>
+</g>
+<g transform="translate(431, 318)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileCreatedEvent">
+<a id="..\src\event\file\FileCreatedEvent.ts.FileCreatedEvent" xlink:href="..\src\event\file\FileCreatedEvent.ts"><text x="112.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileCreatedEvent">FileCreatedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(431, 349)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileCreatedEvent">
+
+</g>
+</g>
+<g transform="translate(431, 357)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileCreatedEvent">
+<text x="0.0" y="13.5" stroke="none" data-name="FileCreatedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileDeletedEvent">
+<g fill="#eee8d5" stroke="#33322E" data-name="FileDeletedEvent">
+<rect x="712.0" y="318.0" height="70.0" width="241.0" data-name="FileDeletedEvent"></rect>
+<path d="M712.0 349.0 L953.0 349.0" fill="none" data-name="FileDeletedEvent"></path>
+<path d="M712.0 357.0 L953.0 357.0" fill="none" data-name="FileDeletedEvent"></path>
+</g>
+<g transform="translate(712, 318)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDeletedEvent">
+<a id="..\src\event\file\FileDeletedEvent.ts.FileDeletedEvent" xlink:href="..\src\event\file\FileDeletedEvent.ts"><text x="112.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileDeletedEvent">FileDeletedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(712, 349)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileDeletedEvent">
+
+</g>
+</g>
+<g transform="translate(712, 357)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileDeletedEvent">
+<text x="0.0" y="13.5" stroke="none" data-name="FileDeletedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

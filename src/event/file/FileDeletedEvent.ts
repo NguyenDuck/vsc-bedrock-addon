@@ -1,20 +1,19 @@
-import { ExtensionContext, Uri, workspace } from 'vscode'
+import { Disposable, FileDeleteEvent, workspace } from 'vscode'
 import { FileEvent } from './FileEvent'
 
 /**
- * FileDeletedEvent extends FileEvent to handle the workspace.onDidDeleteFiles event.
- * It listens for delete events and checks if the deleted file matches this URI,
- * emitting the URI if so.
+ * Extends FileEvent to handle the 'onDidDeleteFiles' event from VS Code
+ * workspace. Checks if the deleted file matches this event's file,
+ * and if so, emits the delete event.
  */
-export class FileDeletedEvent extends FileEvent {
-	constructor(protected context: ExtensionContext, protected uri: Uri) {
-		super(context, uri)
-		this.context.subscriptions.push(
+export class FileDeletedEvent extends FileEvent<FileDeleteEvent> {
+	disposables(): Disposable[] {
+		return [
 			workspace.onDidDeleteFiles(async e => {
-				if (e.files.find(f => f.fsPath === uri.fsPath)) {
-					await this.emit([uri])
+				if (e.files.find(f => f.fsPath === this.uri.fsPath)) {
+					return await this.emit(e)
 				}
-			})
-		)
+			}),
+		]
 	}
 }
