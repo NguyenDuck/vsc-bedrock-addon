@@ -3,7 +3,6 @@ import { Event } from '../Event'
 
 /**
  * Abstract base class for file event objects.
- *
  * Contains common properties for events related to file system changes.
  * Subclasses should provide additional properties specific to the file event type.
  */
