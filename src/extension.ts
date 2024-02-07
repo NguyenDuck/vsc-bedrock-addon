@@ -2,7 +2,7 @@ import { $log } from '@tsed/logger'
 import { ExtensionContext, Uri, workspace } from 'vscode'
 import { parse } from 'jsonc-parser-vsc'
 import { EventManager } from './event/EventManager'
-import { ManifestEventGroup } from './event/api/ManifestEventGroup'
+import { ManifestEventGroup } from './event/api/general/Manifest'
 
 $log.name = 'VSCBedrockAddon'
 
