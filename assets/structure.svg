@@ -1,4 +1,4 @@
-<svg version="1.1" baseProfile="full" width="1134.0" height="1313.5" viewbox="0 0 1134 1313.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="1134.0" height="1123.8" viewbox="0 0 1134 1123.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 <title >VSCBedrockAddon Project Structure</title>
 <desc >#.interface: fill=lightblue
 #.enumeration: fill=lightgreen
@@ -12,17 +12,7 @@
 
 [Event&lt;T&gt;|+listeners: Set&lt;(args: T) =&gt; void \| Promise&lt;void&gt;&gt;;+context: ExtensionContext|\#on(): this;\#off(): this;\#emit(): Promise&lt;void&gt;;+dispose(): void;+static disposables(): Disposable\[\]]
 [EventManager|+events: Event&lt;any&gt;\[\];+context: ExtensionContext|+registerEvent(): void;+registerEventGroup(): void;+removeEvent(): void]
-[BlockEventGroup||]
-[EventGroup]&lt;:-[BlockEventGroup]
-[EntityEventGroup||]
-[EventGroup]&lt;:-[EntityEventGroup]
 [EventGroup|+events: Event&lt;any&gt;\[\];+context: ExtensionContext|+eventGroup(): Disposable\[\];+addEvent(): void;+addEventGroup(): void;+removeEvent(): void]
-[ItemEventGroup||]
-[EventGroup]&lt;:-[ItemEventGroup]
-[ManifestEventGroup|+uri: Uri|+addEventGroupWhenValid(): void;+addAutoCompleteProvider(): void;+addDiagnosticProvider(): void;+updateGlobalStateWhenChanged(): void]
-[EventGroup]&lt;:-[ManifestEventGroup]
-[MCFunctionEventGroup||]
-[EventGroup]&lt;:-[MCFunctionEventGroup]
 [FileContentChangedEvent||+disposables(): Disposable\[\]]
 [FileEvent&lt;T&gt;]&lt;:-[FileContentChangedEvent]
 [FileCreatedEvent||+disposables(): Disposable\[\]]
@@ -38,60 +28,58 @@
 [FileMatcherDeletedEvent||+disposables(): Disposable\[\]]
 [FileMatcherEvent&lt;T&gt;]&lt;:-[FileMatcherDeletedEvent]
 [FileMatcherEvent&lt;T&gt;|+pattern: GlobPattern|]
-[Event&lt;T&gt;]&lt;:-[FileMatcherEvent&lt;T&gt;]</desc>
-<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Ebrima" font-weight="normal" font-style="normal">
+[Event&lt;T&gt;]&lt;:-[FileMatcherEvent&lt;T&gt;]
+[ManifestEventGroup|+uri: Uri|+addEventGroupWhenValid(): void;+addAutoCompleteProvider(): void;+addDiagnosticProvider(): void;+updateGlobalStateWhenChanged(): void]
+[EventGroup]&lt;:-[ManifestEventGroup]
+[PackIconEventGroup||]
+[EventGroup]&lt;:-[PackIconEventGroup]</desc>
+<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Ebrima" font-weight="bold" font-style="normal">
 <g font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 <g stroke="transparent" fill="transparent">
-<rect x="0.0" y="0.0" height="1313.5" width="1134.0" stroke="none"></rect>
+<rect x="0.0" y="0.0" height="1123.8" width="1134.0" stroke="none"></rect>
 </g>
 <g transform="translate(8, 8)" fill="#33322E">
 <g transform="translate(20, 20)" fill="#b5e5ff" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal">
-<path d="M336.3 89.1 L431 29.5 L547.5 29.5 L547.5 29.5 " fill="none"></path>
-<path d="M333.4 84.6 L336.3 89.1 L339.1 93.7 L325.0 96.2 Z"></path>
-<path d="M338.1 146.2 L431 128.5 L547 128.5 L547.0 128.5 " fill="none"></path>
-<path d="M337.1 141.0 L338.1 146.2 L339.1 151.5 L325.0 148.7 Z"></path>
-<path d="M337.9 204.4 L431 227.5 L552 227.5 L552.0 227.5 " fill="none"></path>
-<path d="M339.2 199.2 L337.9 204.4 L336.7 209.6 L325.0 201.2 Z"></path>
-<path d="M330.8 299.5 L431 402 L451 402 L451.0 402.0 " fill="none"></path>
-<path d="M334.6 295.8 L330.8 299.5 L326.9 303.3 L321.4 290.0 Z"></path>
-<path d="M278.0 301.6 L431 576.5 L522 576.5 L522.0 576.5 " fill="none"></path>
-<path d="M282.6 299.1 L278.0 301.6 L273.3 304.2 L271.5 290.0 Z"></path>
-<path d="M689.7 648.4 L817 540.5 L837 540.5 L837.0 540.5 " fill="none"></path>
-<path d="M686.2 644.3 L689.7 648.4 L693.1 652.5 L679.5 657.0 Z"></path>
-<path d="M696.7 692.9 L817 674.5 L837 674.5 L837.0 674.5 " fill="none"></path>
-<path d="M695.9 687.6 L696.7 692.9 L697.5 698.2 L683.5 694.9 Z"></path>
-<path d="M695.2 742.6 L817 808.5 L837 808.5 L837.0 808.5 " fill="none"></path>
-<path d="M697.8 737.9 L695.2 742.6 L692.7 747.3 L683.5 736.2 Z"></path>
-<path d="M389.7 735.4 L431 704 L564.5 704 L564.5 704.0 " fill="none"></path>
-<path d="M386.4 731.2 L389.7 735.4 L392.9 739.7 L379.1 743.5 Z"></path>
-<path d="M689.7 1050.4 L817 942.5 L837 942.5 L837.0 942.5 " fill="none"></path>
-<path d="M686.2 1046.3 L689.7 1050.4 L693.1 1054.5 L679.5 1059.0 Z"></path>
-<path d="M730.2 1089.8 L817 1076.5 L837 1076.5 L837.0 1076.5 " fill="none"></path>
-<path d="M729.4 1084.5 L730.2 1089.8 L731.0 1095.0 L717.0 1091.8 Z"></path>
-<path d="M722.5 1159.3 L817 1210.5 L837 1210.5 L837.0 1210.5 " fill="none"></path>
-<path d="M725.1 1154.7 L722.5 1159.3 L720.0 1164.0 L710.8 1153.0 Z"></path>
-<path d="M344.0 1017.0 L431 1106 L531 1106 L531.0 1106.0 " fill="none"></path>
-<path d="M347.8 1013.3 L344.0 1017.0 L340.1 1020.8 L334.6 1007.5 Z"></path>
+<path d="M696.1 89.0 L817 47 L837 47 L837.0 47.0 " fill="none"></path>
+<path d="M694.3 83.9 L696.1 89.0 L697.8 94.0 L683.5 93.3 Z"></path>
+<path d="M696.1 139.0 L817 181 L837 181 L837.0 181.0 " fill="none"></path>
+<path d="M697.8 134.0 L696.1 139.0 L694.3 144.1 L683.5 134.7 Z"></path>
+<path d="M678.4 170.6 L817 315 L837 315 L837.0 315.0 " fill="none"></path>
+<path d="M682.2 166.9 L678.4 170.6 L674.5 174.3 L669.1 161.0 Z"></path>
+<path d="M325.2 239.8 L431 114 L564.5 114 L564.5 114.0 " fill="none"></path>
+<path d="M321.1 236.4 L325.2 239.8 L329.2 243.2 L316.6 250.0 Z"></path>
+<path d="M729.6 479.3 L817 449 L837 449 L837.0 449.0 " fill="none"></path>
+<path d="M727.8 474.3 L729.6 479.3 L731.3 484.4 L717.0 483.7 Z"></path>
+<path d="M729.6 552.7 L817 583 L837 583 L837.0 583.0 " fill="none"></path>
+<path d="M731.3 547.6 L729.6 552.7 L727.8 557.7 L717.0 548.3 Z"></path>
+<path d="M678.4 572.6 L817 717 L837 717 L837.0 717.0 " fill="none"></path>
+<path d="M682.2 568.9 L678.4 572.6 L674.5 576.3 L669.1 563.0 Z"></path>
+<path d="M422.5 510.9 L431 516 L531 516 L531.0 516.0 " fill="none"></path>
+<path d="M425.2 506.3 L422.5 510.9 L419.7 515.5 L411.0 504.1 Z"></path>
+<path d="M325.4 821.0 L431 708 L451 708 L451.0 708.0 " fill="none"></path>
+<path d="M321.5 817.4 L325.4 821.0 L329.3 824.7 L316.3 830.8 Z"></path>
+<path d="M338.3 961.2 L431 969.5 L532.5 969.5 L532.5 969.5 " fill="none"></path>
+<path d="M338.8 955.9 L338.3 961.2 L337.8 966.5 L325.0 960.0 Z"></path>
 <g data-name="Event&lt;T&gt;">
 <g fill="#b5e5ff" stroke="#33322E" data-name="Event&lt;T&gt;">
-<rect x="0.0" y="743.5" height="264.0" width="411.0" data-name="Event&lt;T&gt;"></rect>
-<path d="M0.0 786.5 L411.0 786.5" fill="none" data-name="Event&lt;T&gt;"></path>
-<path d="M0.0 856.5 L411.0 856.5" fill="none" data-name="Event&lt;T&gt;"></path>
+<rect x="0.0" y="250.0" height="264.0" width="411.0" data-name="Event&lt;T&gt;"></rect>
+<path d="M0.0 293.0 L411.0 293.0" fill="none" data-name="Event&lt;T&gt;"></path>
+<path d="M0.0 363.0 L411.0 363.0" fill="none" data-name="Event&lt;T&gt;"></path>
 </g>
-<g transform="translate(0, 743.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(0, 250)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="Event&lt;T&gt;">
 <g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Event&lt;T&gt;">
 <a id="..\src\event\Event.ts.Event&lt;T&gt;" xlink:href="..\src\event\Event.ts"><text x="197.5" y="19.5" stroke="none" text-anchor="middle" data-name="Event&lt;T&gt;">Event&lt;T&gt;</text></a>
 
 </g>
 </g>
-<g transform="translate(0, 786.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(0, 293)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Event&lt;T&gt;">
 <text x="0.0" y="19.5" stroke="none" data-name="Event&lt;T&gt;">+listeners: Set&lt;(args: T) =&gt; void | Promise&lt;void&gt;&gt;</text>
 <text x="0.0" y="46.5" stroke="none" data-name="Event&lt;T&gt;">+context: ExtensionContext</text>
 
 </g>
 </g>
-<g transform="translate(0, 856.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
+<g transform="translate(0, 363)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="Event&lt;T&gt;">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Event&lt;T&gt;">
 <text x="0.0" y="19.5" stroke="none" data-name="Event&lt;T&gt;">#on(): this</text>
 <text x="0.0" y="46.5" stroke="none" data-name="Event&lt;T&gt;">#off(): this</text>
@@ -104,24 +92,24 @@
 </g>
 <g data-name="EventManager">
 <g fill="#b5e5ff" stroke="#33322E" data-name="EventManager">
-<rect x="88.0" y="348.5" height="210.0" width="235.0" data-name="EventManager"></rect>
-<path d="M88.0 391.5 L323.0 391.5" fill="none" data-name="EventManager"></path>
-<path d="M88.0 461.5 L323.0 461.5" fill="none" data-name="EventManager"></path>
+<rect x="88.0" y="580.8" height="210.0" width="235.0" data-name="EventManager"></rect>
+<path d="M88.0 623.8 L323.0 623.8" fill="none" data-name="EventManager"></path>
+<path d="M88.0 693.8 L323.0 693.8" fill="none" data-name="EventManager"></path>
 </g>
-<g transform="translate(88, 348.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventManager">
+<g transform="translate(88, 580.75)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventManager">
 <g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EventManager">
 <a id="..\src\event\EventManager.ts.EventManager" xlink:href="..\src\event\EventManager.ts"><text x="109.5" y="19.5" stroke="none" text-anchor="middle" data-name="EventManager">EventManager</text></a>
 
 </g>
 </g>
-<g transform="translate(88, 391.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
+<g transform="translate(88, 623.75)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventManager">
 <text x="0.0" y="19.5" stroke="none" data-name="EventManager">+events: Event&lt;any&gt;[]</text>
 <text x="0.0" y="46.5" stroke="none" data-name="EventManager">+context: ExtensionContext</text>
 
 </g>
 </g>
-<g transform="translate(88, 461.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
+<g transform="translate(88, 693.75)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventManager">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventManager">
 <text x="0.0" y="19.5" stroke="none" data-name="EventManager">+registerEvent(): void</text>
 <text x="0.0" y="46.5" stroke="none" data-name="EventManager">+registerEventGroup(): void</text>
@@ -130,49 +118,26 @@
 </g>
 </g>
 </g>
-<g data-name="BlockEventGroup">
-<g fill="#b5e5ff" stroke="#33322E" data-name="BlockEventGroup">
-<rect x="547.5" y="0.0" height="59.0" width="153.0" data-name="BlockEventGroup"></rect>
-<path d="M547.5 43.0 L700.5 43.0" fill="none" data-name="BlockEventGroup"></path>
-<path d="M547.5 51.0 L700.5 51.0" fill="none" data-name="BlockEventGroup"></path>
-</g>
-<g transform="translate(547.5, 0)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="BlockEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BlockEventGroup">
-<a id="..\src\event\api\BlockEventGroup.ts.BlockEventGroup" xlink:href="..\src\event\api\BlockEventGroup.ts"><text x="68.5" y="19.5" stroke="none" text-anchor="middle" data-name="BlockEventGroup">BlockEventGroup</text></a>
-
-</g>
-</g>
-<g transform="translate(547.5, 43)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="BlockEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="BlockEventGroup">
-
-</g>
-</g>
-<g transform="translate(547.5, 51)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="BlockEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="BlockEventGroup">
-
-</g>
-</g>
-</g>
 <g data-name="EventGroup">
 <g fill="#b5e5ff" stroke="#33322E" data-name="EventGroup">
-<rect x="86.0" y="53.0" height="237.0" width="239.0" data-name="EventGroup"></rect>
-<path d="M86.0 96.0 L325.0 96.0" fill="none" data-name="EventGroup"></path>
-<path d="M86.0 166.0 L325.0 166.0" fill="none" data-name="EventGroup"></path>
+<rect x="86.0" y="830.8" height="237.0" width="239.0" data-name="EventGroup"></rect>
+<path d="M86.0 873.8 L325.0 873.8" fill="none" data-name="EventGroup"></path>
+<path d="M86.0 943.8 L325.0 943.8" fill="none" data-name="EventGroup"></path>
 </g>
-<g transform="translate(86, 53)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventGroup">
+<g transform="translate(86, 830.75)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EventGroup">
 <a id="..\src\event\api\EventGroup.ts.EventGroup" xlink:href="..\src\event\api\EventGroup.ts"><text x="111.5" y="19.5" stroke="none" text-anchor="middle" data-name="EventGroup">EventGroup</text></a>
 
 </g>
 </g>
-<g transform="translate(86, 96)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
+<g transform="translate(86, 873.75)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventGroup">
 <text x="0.0" y="19.5" stroke="none" data-name="EventGroup">+events: Event&lt;any&gt;[]</text>
 <text x="0.0" y="46.5" stroke="none" data-name="EventGroup">+context: ExtensionContext</text>
 
 </g>
 </g>
-<g transform="translate(86, 166)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
+<g transform="translate(86, 943.75)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EventGroup">
 <text x="0.0" y="19.5" stroke="none" data-name="EventGroup">+eventGroup(): Disposable[]</text>
 <text x="0.0" y="46.5" stroke="none" data-name="EventGroup">+addEvent(): void</text>
@@ -182,71 +147,217 @@
 </g>
 </g>
 </g>
-<g data-name="EntityEventGroup">
-<g fill="#b5e5ff" stroke="#33322E" data-name="EntityEventGroup">
-<rect x="547.0" y="99.0" height="59.0" width="154.0" data-name="EntityEventGroup"></rect>
-<path d="M547.0 142.0 L701.0 142.0" fill="none" data-name="EntityEventGroup"></path>
-<path d="M547.0 150.0 L701.0 150.0" fill="none" data-name="EntityEventGroup"></path>
+<g data-name="FileContentChangedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileContentChangedEvent">
+<rect x="837.0" y="0.0" height="94.0" width="241.0" data-name="FileContentChangedEvent"></rect>
+<path d="M837.0 43.0 L1078.0 43.0" fill="none" data-name="FileContentChangedEvent"></path>
+<path d="M837.0 51.0 L1078.0 51.0" fill="none" data-name="FileContentChangedEvent"></path>
 </g>
-<g transform="translate(547, 99)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="EntityEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EntityEventGroup">
-<a id="..\src\event\api\EntityEventGroup.ts.EntityEventGroup" xlink:href="..\src\event\api\EntityEventGroup.ts"><text x="69.0" y="19.5" stroke="none" text-anchor="middle" data-name="EntityEventGroup">EntityEventGroup</text></a>
+<g transform="translate(837, 0)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileContentChangedEvent">
+<a id="..\src\event\file\FileContentChangedEvent.ts.FileContentChangedEvent" xlink:href="..\src\event\file\FileContentChangedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileContentChangedEvent">FileContentChangedEvent</text></a>
 
 </g>
 </g>
-<g transform="translate(547, 142)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EntityEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="EntityEventGroup">
+<g transform="translate(837, 43)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileContentChangedEvent">
 
 </g>
 </g>
-<g transform="translate(547, 150)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="EntityEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="EntityEventGroup">
+<g transform="translate(837, 51)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileContentChangedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileContentChangedEvent">+disposables(): Disposable[]</text>
 
 </g>
 </g>
 </g>
-<g data-name="ItemEventGroup">
-<g fill="#b5e5ff" stroke="#33322E" data-name="ItemEventGroup">
-<rect x="552.0" y="198.0" height="59.0" width="144.0" data-name="ItemEventGroup"></rect>
-<path d="M552.0 241.0 L696.0 241.0" fill="none" data-name="ItemEventGroup"></path>
-<path d="M552.0 249.0 L696.0 249.0" fill="none" data-name="ItemEventGroup"></path>
+<g data-name="FileEvent&lt;T&gt;">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileEvent&lt;T&gt;">
+<rect x="564.5" y="67.0" height="94.0" width="119.0" data-name="FileEvent&lt;T&gt;"></rect>
+<path d="M564.5 110.0 L683.5 110.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
+<path d="M564.5 153.0 L683.5 153.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
 </g>
-<g transform="translate(552, 198)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemEventGroup">
-<a id="..\src\event\api\ItemEventGroup.ts.ItemEventGroup" xlink:href="..\src\event\api\ItemEventGroup.ts"><text x="64.0" y="19.5" stroke="none" text-anchor="middle" data-name="ItemEventGroup">ItemEventGroup</text></a>
+<g transform="translate(564.5, 67)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileEvent&lt;T&gt;">
+<a id="..\src\event\file\FileEvent.ts.FileEvent&lt;T&gt;" xlink:href="..\src\event\file\FileEvent.ts"><text x="51.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileEvent&lt;T&gt;">FileEvent&lt;T&gt;</text></a>
 
 </g>
 </g>
-<g transform="translate(552, 241)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ItemEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="ItemEventGroup">
+<g transform="translate(564.5, 110)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileEvent&lt;T&gt;">
+<text x="0.0" y="19.5" stroke="none" data-name="FileEvent&lt;T&gt;">+uri: Uri</text>
 
 </g>
 </g>
-<g transform="translate(552, 249)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ItemEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="ItemEventGroup">
+<g transform="translate(564.5, 153)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileEvent&lt;T&gt;">
+
+</g>
+</g>
+</g>
+<g data-name="FileCreatedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileCreatedEvent">
+<rect x="837.0" y="134.0" height="94.0" width="241.0" data-name="FileCreatedEvent"></rect>
+<path d="M837.0 177.0 L1078.0 177.0" fill="none" data-name="FileCreatedEvent"></path>
+<path d="M837.0 185.0 L1078.0 185.0" fill="none" data-name="FileCreatedEvent"></path>
+</g>
+<g transform="translate(837, 134)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileCreatedEvent">
+<a id="..\src\event\file\FileCreatedEvent.ts.FileCreatedEvent" xlink:href="..\src\event\file\FileCreatedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileCreatedEvent">FileCreatedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(837, 177)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileCreatedEvent">
+
+</g>
+</g>
+<g transform="translate(837, 185)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileCreatedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileCreatedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileDeletedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileDeletedEvent">
+<rect x="837.0" y="268.0" height="94.0" width="241.0" data-name="FileDeletedEvent"></rect>
+<path d="M837.0 311.0 L1078.0 311.0" fill="none" data-name="FileDeletedEvent"></path>
+<path d="M837.0 319.0 L1078.0 319.0" fill="none" data-name="FileDeletedEvent"></path>
+</g>
+<g transform="translate(837, 268)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDeletedEvent">
+<a id="..\src\event\file\FileDeletedEvent.ts.FileDeletedEvent" xlink:href="..\src\event\file\FileDeletedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileDeletedEvent">FileDeletedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(837, 311)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileDeletedEvent">
+
+</g>
+</g>
+<g transform="translate(837, 319)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileDeletedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileDeletedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileMatcherChangedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherChangedEvent">
+<rect x="837.0" y="402.0" height="94.0" width="241.0" data-name="FileMatcherChangedEvent"></rect>
+<path d="M837.0 445.0 L1078.0 445.0" fill="none" data-name="FileMatcherChangedEvent"></path>
+<path d="M837.0 453.0 L1078.0 453.0" fill="none" data-name="FileMatcherChangedEvent"></path>
+</g>
+<g transform="translate(837, 402)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherChangedEvent">
+<a id="..\src\event\file\FileMatcherChangedEvent.ts.FileMatcherChangedEvent" xlink:href="..\src\event\file\FileMatcherChangedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherChangedEvent">FileMatcherChangedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(837, 445)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherChangedEvent">
+
+</g>
+</g>
+<g transform="translate(837, 453)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherChangedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherChangedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherChangedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileMatcherEvent&lt;T&gt;">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherEvent&lt;T&gt;">
+<rect x="531.0" y="469.0" height="94.0" width="186.0" data-name="FileMatcherEvent&lt;T&gt;"></rect>
+<path d="M531.0 512.0 L717.0 512.0" fill="none" data-name="FileMatcherEvent&lt;T&gt;"></path>
+<path d="M531.0 555.0 L717.0 555.0" fill="none" data-name="FileMatcherEvent&lt;T&gt;"></path>
+</g>
+<g transform="translate(531, 469)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherEvent&lt;T&gt;">
+<a id="..\src\event\file\FileMatcherEvent.ts.FileMatcherEvent&lt;T&gt;" xlink:href="..\src\event\file\FileMatcherEvent.ts"><text x="85.0" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherEvent&lt;T&gt;">FileMatcherEvent&lt;T&gt;</text></a>
+
+</g>
+</g>
+<g transform="translate(531, 512)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherEvent&lt;T&gt;">
+<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherEvent&lt;T&gt;">+pattern: GlobPattern</text>
+
+</g>
+</g>
+<g transform="translate(531, 555)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherEvent&lt;T&gt;">
+
+</g>
+</g>
+</g>
+<g data-name="FileMatcherCreatedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherCreatedEvent">
+<rect x="837.0" y="536.0" height="94.0" width="241.0" data-name="FileMatcherCreatedEvent"></rect>
+<path d="M837.0 579.0 L1078.0 579.0" fill="none" data-name="FileMatcherCreatedEvent"></path>
+<path d="M837.0 587.0 L1078.0 587.0" fill="none" data-name="FileMatcherCreatedEvent"></path>
+</g>
+<g transform="translate(837, 536)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherCreatedEvent">
+<a id="..\src\event\file\FileMatcherCreatedEvent.ts.FileMatcherCreatedEvent" xlink:href="..\src\event\file\FileMatcherCreatedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherCreatedEvent">FileMatcherCreatedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(837, 579)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherCreatedEvent">
+
+</g>
+</g>
+<g transform="translate(837, 587)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherCreatedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherCreatedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherCreatedEvent">+disposables(): Disposable[]</text>
+
+</g>
+</g>
+</g>
+<g data-name="FileMatcherDeletedEvent">
+<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherDeletedEvent">
+<rect x="837.0" y="670.0" height="94.0" width="241.0" data-name="FileMatcherDeletedEvent"></rect>
+<path d="M837.0 713.0 L1078.0 713.0" fill="none" data-name="FileMatcherDeletedEvent"></path>
+<path d="M837.0 721.0 L1078.0 721.0" fill="none" data-name="FileMatcherDeletedEvent"></path>
+</g>
+<g transform="translate(837, 670)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherDeletedEvent">
+<a id="..\src\event\file\FileMatcherDeletedEvent.ts.FileMatcherDeletedEvent" xlink:href="..\src\event\file\FileMatcherDeletedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherDeletedEvent">FileMatcherDeletedEvent</text></a>
+
+</g>
+</g>
+<g transform="translate(837, 713)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherDeletedEvent">
+
+</g>
+</g>
+<g transform="translate(837, 721)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherDeletedEvent">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherDeletedEvent">
+<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherDeletedEvent">+disposables(): Disposable[]</text>
 
 </g>
 </g>
 </g>
 <g data-name="ManifestEventGroup">
 <g fill="#b5e5ff" stroke="#33322E" data-name="ManifestEventGroup">
-<rect x="451.0" y="297.0" height="210.0" width="346.0" data-name="ManifestEventGroup"></rect>
-<path d="M451.0 340.0 L797.0 340.0" fill="none" data-name="ManifestEventGroup"></path>
-<path d="M451.0 383.0 L797.0 383.0" fill="none" data-name="ManifestEventGroup"></path>
+<rect x="451.0" y="603.0" height="210.0" width="346.0" data-name="ManifestEventGroup"></rect>
+<path d="M451.0 646.0 L797.0 646.0" fill="none" data-name="ManifestEventGroup"></path>
+<path d="M451.0 689.0 L797.0 689.0" fill="none" data-name="ManifestEventGroup"></path>
 </g>
-<g transform="translate(451, 297)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(451, 603)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="ManifestEventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ManifestEventGroup">
-<a id="..\src\event\api\ManifestEventGroup.ts.ManifestEventGroup" xlink:href="..\src\event\api\ManifestEventGroup.ts"><text x="165.0" y="19.5" stroke="none" text-anchor="middle" data-name="ManifestEventGroup">ManifestEventGroup</text></a>
+<a id="..\src\event\api\general\Manifest.ts.ManifestEventGroup" xlink:href="..\src\event\api\general\Manifest.ts"><text x="165.0" y="19.5" stroke="none" text-anchor="middle" data-name="ManifestEventGroup">ManifestEventGroup</text></a>
 
 </g>
 </g>
-<g transform="translate(451, 340)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(451, 646)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ManifestEventGroup">
 <text x="0.0" y="19.5" stroke="none" data-name="ManifestEventGroup">+uri: Uri</text>
 
 </g>
 </g>
-<g transform="translate(451, 383)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
+<g transform="translate(451, 689)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="ManifestEventGroup">
 <g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ManifestEventGroup">
 <text x="0.0" y="19.5" stroke="none" data-name="ManifestEventGroup">+addEventGroupWhenValid(): void</text>
 <text x="0.0" y="46.5" stroke="none" data-name="ManifestEventGroup">+addAutoCompleteProvider(): void</text>
@@ -256,217 +367,25 @@
 </g>
 </g>
 </g>
-<g data-name="MCFunctionEventGroup">
-<g fill="#b5e5ff" stroke="#33322E" data-name="MCFunctionEventGroup">
-<rect x="522.0" y="547.0" height="59.0" width="204.0" data-name="MCFunctionEventGroup"></rect>
-<path d="M522.0 590.0 L726.0 590.0" fill="none" data-name="MCFunctionEventGroup"></path>
-<path d="M522.0 598.0 L726.0 598.0" fill="none" data-name="MCFunctionEventGroup"></path>
+<g data-name="PackIconEventGroup">
+<g fill="#b5e5ff" stroke="#33322E" data-name="PackIconEventGroup">
+<rect x="532.5" y="940.0" height="59.0" width="183.0" data-name="PackIconEventGroup"></rect>
+<path d="M532.5 983.0 L715.5 983.0" fill="none" data-name="PackIconEventGroup"></path>
+<path d="M532.5 991.0 L715.5 991.0" fill="none" data-name="PackIconEventGroup"></path>
 </g>
-<g transform="translate(522, 547)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="MCFunctionEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MCFunctionEventGroup">
-<a id="..\src\event\api\MCFunctionEventGroup.ts.MCFunctionEventGroup" xlink:href="..\src\event\api\MCFunctionEventGroup.ts"><text x="94.0" y="19.5" stroke="none" text-anchor="middle" data-name="MCFunctionEventGroup">MCFunctionEventGroup</text></a>
+<g transform="translate(532.5, 940)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="PackIconEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PackIconEventGroup">
+<a id="..\src\event\api\general\PackIcon.ts.PackIconEventGroup" xlink:href="..\src\event\api\general\PackIcon.ts"><text x="83.5" y="19.5" stroke="none" text-anchor="middle" data-name="PackIconEventGroup">PackIconEventGroup</text></a>
 
 </g>
 </g>
-<g transform="translate(522, 590)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="MCFunctionEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="MCFunctionEventGroup">
+<g transform="translate(532.5, 983)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="PackIconEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" data-name="PackIconEventGroup">
 
 </g>
 </g>
-<g transform="translate(522, 598)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="MCFunctionEventGroup">
-<g transform="translate(8, 8)" fill="#33322E" data-name="MCFunctionEventGroup">
-
-</g>
-</g>
-</g>
-<g data-name="FileContentChangedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileContentChangedEvent">
-<rect x="837.0" y="493.5" height="94.0" width="241.0" data-name="FileContentChangedEvent"></rect>
-<path d="M837.0 536.5 L1078.0 536.5" fill="none" data-name="FileContentChangedEvent"></path>
-<path d="M837.0 544.5 L1078.0 544.5" fill="none" data-name="FileContentChangedEvent"></path>
-</g>
-<g transform="translate(837, 493.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileContentChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileContentChangedEvent">
-<a id="..\src\event\file\FileContentChangedEvent.ts.FileContentChangedEvent" xlink:href="..\src\event\file\FileContentChangedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileContentChangedEvent">FileContentChangedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 536.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileContentChangedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 544.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileContentChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileContentChangedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileContentChangedEvent">+disposables(): Disposable[]</text>
-
-</g>
-</g>
-</g>
-<g data-name="FileEvent&lt;T&gt;">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileEvent&lt;T&gt;">
-<rect x="564.5" y="657.0" height="94.0" width="119.0" data-name="FileEvent&lt;T&gt;"></rect>
-<path d="M564.5 700.0 L683.5 700.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
-<path d="M564.5 743.0 L683.5 743.0" fill="none" data-name="FileEvent&lt;T&gt;"></path>
-</g>
-<g transform="translate(564.5, 657)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileEvent&lt;T&gt;">
-<a id="..\src\event\file\FileEvent.ts.FileEvent&lt;T&gt;" xlink:href="..\src\event\file\FileEvent.ts"><text x="51.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileEvent&lt;T&gt;">FileEvent&lt;T&gt;</text></a>
-
-</g>
-</g>
-<g transform="translate(564.5, 700)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileEvent&lt;T&gt;">
-<text x="0.0" y="19.5" stroke="none" data-name="FileEvent&lt;T&gt;">+uri: Uri</text>
-
-</g>
-</g>
-<g transform="translate(564.5, 743)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileEvent&lt;T&gt;">
-
-</g>
-</g>
-</g>
-<g data-name="FileCreatedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileCreatedEvent">
-<rect x="837.0" y="627.5" height="94.0" width="241.0" data-name="FileCreatedEvent"></rect>
-<path d="M837.0 670.5 L1078.0 670.5" fill="none" data-name="FileCreatedEvent"></path>
-<path d="M837.0 678.5 L1078.0 678.5" fill="none" data-name="FileCreatedEvent"></path>
-</g>
-<g transform="translate(837, 627.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileCreatedEvent">
-<a id="..\src\event\file\FileCreatedEvent.ts.FileCreatedEvent" xlink:href="..\src\event\file\FileCreatedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileCreatedEvent">FileCreatedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 670.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileCreatedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 678.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileCreatedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileCreatedEvent">+disposables(): Disposable[]</text>
-
-</g>
-</g>
-</g>
-<g data-name="FileDeletedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileDeletedEvent">
-<rect x="837.0" y="761.5" height="94.0" width="241.0" data-name="FileDeletedEvent"></rect>
-<path d="M837.0 804.5 L1078.0 804.5" fill="none" data-name="FileDeletedEvent"></path>
-<path d="M837.0 812.5 L1078.0 812.5" fill="none" data-name="FileDeletedEvent"></path>
-</g>
-<g transform="translate(837, 761.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDeletedEvent">
-<a id="..\src\event\file\FileDeletedEvent.ts.FileDeletedEvent" xlink:href="..\src\event\file\FileDeletedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileDeletedEvent">FileDeletedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 804.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileDeletedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 812.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileDeletedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileDeletedEvent">+disposables(): Disposable[]</text>
-
-</g>
-</g>
-</g>
-<g data-name="FileMatcherChangedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherChangedEvent">
-<rect x="837.0" y="895.5" height="94.0" width="241.0" data-name="FileMatcherChangedEvent"></rect>
-<path d="M837.0 938.5 L1078.0 938.5" fill="none" data-name="FileMatcherChangedEvent"></path>
-<path d="M837.0 946.5 L1078.0 946.5" fill="none" data-name="FileMatcherChangedEvent"></path>
-</g>
-<g transform="translate(837, 895.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherChangedEvent">
-<a id="..\src\event\file\FileMatcherChangedEvent.ts.FileMatcherChangedEvent" xlink:href="..\src\event\file\FileMatcherChangedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherChangedEvent">FileMatcherChangedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 938.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherChangedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 946.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherChangedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherChangedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherChangedEvent">+disposables(): Disposable[]</text>
-
-</g>
-</g>
-</g>
-<g data-name="FileMatcherEvent&lt;T&gt;">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherEvent&lt;T&gt;">
-<rect x="531.0" y="1059.0" height="94.0" width="186.0" data-name="FileMatcherEvent&lt;T&gt;"></rect>
-<path d="M531.0 1102.0 L717.0 1102.0" fill="none" data-name="FileMatcherEvent&lt;T&gt;"></path>
-<path d="M531.0 1145.0 L717.0 1145.0" fill="none" data-name="FileMatcherEvent&lt;T&gt;"></path>
-</g>
-<g transform="translate(531, 1059)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherEvent&lt;T&gt;">
-<a id="..\src\event\file\FileMatcherEvent.ts.FileMatcherEvent&lt;T&gt;" xlink:href="..\src\event\file\FileMatcherEvent.ts"><text x="85.0" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherEvent&lt;T&gt;">FileMatcherEvent&lt;T&gt;</text></a>
-
-</g>
-</g>
-<g transform="translate(531, 1102)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherEvent&lt;T&gt;">
-<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherEvent&lt;T&gt;">+pattern: GlobPattern</text>
-
-</g>
-</g>
-<g transform="translate(531, 1145)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherEvent&lt;T&gt;">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherEvent&lt;T&gt;">
-
-</g>
-</g>
-</g>
-<g data-name="FileMatcherCreatedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherCreatedEvent">
-<rect x="837.0" y="1029.5" height="94.0" width="241.0" data-name="FileMatcherCreatedEvent"></rect>
-<path d="M837.0 1072.5 L1078.0 1072.5" fill="none" data-name="FileMatcherCreatedEvent"></path>
-<path d="M837.0 1080.5 L1078.0 1080.5" fill="none" data-name="FileMatcherCreatedEvent"></path>
-</g>
-<g transform="translate(837, 1029.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherCreatedEvent">
-<a id="..\src\event\file\FileMatcherCreatedEvent.ts.FileMatcherCreatedEvent" xlink:href="..\src\event\file\FileMatcherCreatedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherCreatedEvent">FileMatcherCreatedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 1072.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherCreatedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 1080.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherCreatedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherCreatedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherCreatedEvent">+disposables(): Disposable[]</text>
-
-</g>
-</g>
-</g>
-<g data-name="FileMatcherDeletedEvent">
-<g fill="#b5e5ff" stroke="#33322E" data-name="FileMatcherDeletedEvent">
-<rect x="837.0" y="1163.5" height="94.0" width="241.0" data-name="FileMatcherDeletedEvent"></rect>
-<path d="M837.0 1206.5 L1078.0 1206.5" fill="none" data-name="FileMatcherDeletedEvent"></path>
-<path d="M837.0 1214.5 L1078.0 1214.5" fill="none" data-name="FileMatcherDeletedEvent"></path>
-</g>
-<g transform="translate(837, 1163.5)" font-family="Ebrima" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileMatcherDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileMatcherDeletedEvent">
-<a id="..\src\event\file\FileMatcherDeletedEvent.ts.FileMatcherDeletedEvent" xlink:href="..\src\event\file\FileMatcherDeletedEvent.ts"><text x="112.5" y="19.5" stroke="none" text-anchor="middle" data-name="FileMatcherDeletedEvent">FileMatcherDeletedEvent</text></a>
-
-</g>
-</g>
-<g transform="translate(837, 1206.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" data-name="FileMatcherDeletedEvent">
-
-</g>
-</g>
-<g transform="translate(837, 1214.5)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileMatcherDeletedEvent">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileMatcherDeletedEvent">
-<text x="0.0" y="19.5" stroke="none" data-name="FileMatcherDeletedEvent">+disposables(): Disposable[]</text>
+<g transform="translate(532.5, 991)" font-family="Ebrima" font-size="12pt" font-weight="normal" font-style="normal" data-name="PackIconEventGroup">
+<g transform="translate(8, 8)" fill="#33322E" data-name="PackIconEventGroup">
 
 </g>
 </g>
